@@ -1,0 +1,115 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Caveat:wght@600;700&display=swap');
+
+:root {
+  --primary-purple: #6546D9;
+  --secondary-purple: #7B61E8;
+  --light-lavender: #F4F1FF;
+  --very-light-lavender: #FAF9FF;
+  --dark-navy: #111A35;
+  --muted-text: #5D6785;
+  --yellow-accent: #FFC83D;
+  --reported-red: #EF3B35;
+  --processing-amber: #F9B51B;
+  --solved-green: #2DB45A;
+}
+
+body {
+  font-family: 'Poppins', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: var(--dark-navy);
+  background-color: #FAF9FF;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.font-handwritten {
+  font-family: 'Caveat', cursive;
+}
+
+/* Custom organic blob shapes & tilt helpers */
+.blob-shape-1 {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.blob-shape-2 {
+  border-radius: 40% 60% 70% 30% / 50% 60% 30% 50%;
+}
+
+.blob-shape-3 {
+  border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%;
+}
+
+.card-tilt-left {
+  transform: rotate(-1.2deg);
+}
+
+.card-tilt-right {
+  transform: rotate(1.2deg);
+}
+
+.card-tilt-left:hover, .card-tilt-right:hover {
+  transform: rotate(0deg) translateY(-4px);
+}
+
+/* Pulse animation for civic status dots */
+@keyframes softPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.25); opacity: 0.75; }
+}
+
+.animate-pulse-soft {
+  animation: softPulse 2.5s infinite ease-in-out;
+}
+
+/* Floating animation for hero elements */
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(0.8deg); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.65; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.03); }
+}
+
+@keyframes birdGentle {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-4px) translateX(3px); }
+}
+
+.animate-float {
+  animation: floatGentle 4.5s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 6.5s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 5s ease-in-out infinite;
+}
+
+.animate-bird-fly {
+  animation: birdGentle 4s ease-in-out infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1EDFF;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4B5FD;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6546D9;
+}
